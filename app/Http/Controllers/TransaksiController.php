@@ -32,7 +32,7 @@ class TransaksiController extends Controller
 
         if ($check) {
             $barang->decrement('stok', $data[1]);
-            return redirect('dashboard')->with('status', 'Berhasil membeli: ');
+            return redirect('dashboard')->with('status', 'Berhasil membeli barang');
         }
 
         return redirect('dashboard')->with('status', 'Gagal membeli barang');
